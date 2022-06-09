@@ -1,5 +1,5 @@
 def call(credId,tomcatIp,tomcatuserId){
-sshagent(['credId']){
+sshagent([credId]){
     // copy war file to tomcat server
     sh """
     scp -o StrictHostKeyChecking=no target/myweb*.war $(tomcatuserId)@$(tomcatIp):/opt/tomcat8/webapps/myweb.war
